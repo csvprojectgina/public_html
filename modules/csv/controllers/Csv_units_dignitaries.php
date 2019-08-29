@@ -106,31 +106,31 @@ class csv_units_dignitaries extends Admin_Controller
 
 
 
-    // public function get_dignitaries()
+    public function get_dignitaries()
 
 
 
-    // {
+    {
 
 
 
-    //     $qr = query("SELECT * FROM `tbl_medal`");
+        parent::__construct();
 
 
 
-    //     $res = $qr->result();
+        //session_start();
 
 
 
-    //     header('Content-Type: application/json; charset=utf-8');
+        unset($_SESSION['path_file']);
 
 
 
-    //     echo json_encode($res);
+        echo json_encode($res);
 
 
 
-    // }
+    }
 
 
 
@@ -149,7 +149,7 @@ class csv_units_dignitaries extends Admin_Controller
 
 
 
-                'name' => $this->input->post('name'),
+                'description' => $this->input->post('desc')
 
 
 

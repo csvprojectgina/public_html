@@ -383,7 +383,8 @@ class csv_update extends Admin_Controller
                                         1   ELSE    0    END,
 
                                  common_official_code ASC";
-        $list_csv = $this->db->query($sql_str);
+        $object->setActiveSheetIndex(0);
+        
 
         $object = new PHPExcel();
 
@@ -395,7 +396,7 @@ class csv_update extends Admin_Controller
 
         $table_columns = ['ល.រ', 'អត្តលេខមន្ត្រី', 'នាម និងគោត្តនាម', 'ភេទ', 'មុខតំណែង', 'ថ្ងៃ​ ខែ ឆ្នាំ កំណើត', 'ថ្ងៃ​ខែឆ្នាំ ដំឡើងថ្នាក់ ឋានន្តរស័ក្តិចុងក្រោយ', 'ក្របខណ្ឌបច្ចុប្បន្ន', 'ក្របខណ្ឌស្នើសុំ', 'លេខព្រះរាជក្រឹត្យ អនុក្រឹត នៃដំឡើងថ្នាក់​ ឋានន្តរស័ក្តិ ចុងក្រោយ'];
 
-        $column = 0;
+        $list_csv = $this->db->query($sql_str);
 
         //$table_columns = ['eee','ffgggg','ddfdfd','fsdfadf','gfghfgg','frrtrter','uuuiuyj','tyrtyrt','gdfdfgf'];
 
