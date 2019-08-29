@@ -50,7 +50,7 @@
 
         <div class="panel-body">
 
-        <table id="cd-grid" class="table table-hover table-striped table-bordered dt-responsive nowrap"  cellspacing="0" width="100%" style="font-family: khmermef1;">
+        <table id="cd-grid" class="table table-hover table-striped table-bordered dt-responsive nowrap"  cellspacing="0" width="100%" style=" font-family: khmermef1; " >
 
         <thead>
 

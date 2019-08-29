@@ -52,10 +52,10 @@ if (!defined('BASEPATH'))
  */
 
 
-$config['base_url'] = 'http://127.0.0.1/public_html1/';
+// $config['base_url'] = 'http://mlmupc.org/';
 
 
-
+$config['base_url'] = 'http://192.168.1.214/public_html/';
 
 
 /*
@@ -1123,19 +1123,26 @@ $config['class_dignitaries'] = [
 //
 
 
-spl_autoload_register(function($class) {
+// function __autoload($class) {
 
 
+//   if (strpos($class, 'CI_') !== 0) {
+
+
+//    @include_once( APPPATH . 'core/' . $class . EXT );
+
+
+//  }
+// }
+
+spl_autoload_register(function($class){
   if (strpos($class, 'CI_') !== 0) {
 
-
-   @include_once( APPPATH . 'core/' . $class . EXT );
-
-
- }
-
-
+    @include_once( APPPATH . 'core/' . $class . EXT );
+  }
 });
+
+
 
 
 

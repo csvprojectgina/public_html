@@ -16,16 +16,16 @@
                     <option>1000</option>
                 </select>
                 <label for="s_dis"><?= t('នាក់') ?></label>
-                <span style="float: right;">
+                <span style="float: right; font-family: khmermef1;">
                     <label for="search"><?= t('ស្វែងរក') ?></label>
-                    <input type="text" id="search" name="search" style="height: 30px;border-radius: 4px;line-height: 4px;margin: 10px 10px 20px;" />
+                    <input type="text" id="search" name="search" style="height: 30px;border-radius: 4px;line-height: 4px;margin: 10px 10px 20px; font-family: khmermef1;" />
                 </span>
 
             </div>
             <div id="x_img" style="display: inline; margin: 10px 600px 5px 10px"></div>
 
             <!-- table data -->
-            <table cellpadding="0" cellspacing="0" border="1" class="table table-striped table-bordered table-hover" style="text-align: center; vertical-align: middle;" id="my_gr">
+            <table cellpadding="0" cellspacing="0" border="1" class="table table-striped table-bordered table-hover" style="text-align: center; vertical-align: middle; font-family: khmermef1;" id="my_gr">
                 <thead>
                     <tr style="background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);background-repeat: repeat-x;">
                         <th style="text-align: center;"><?= t('ល.រ') ?></th>

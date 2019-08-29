@@ -19,7 +19,7 @@
             <legend><?= t('ស្វែងរកមន្ត្រី') ?></legend>
             <div class="form-group">
 
-                <label class="col-lg-2 col-md-2 text-right"​ style="line-height: 32px;​​​​​​​"> 
+                <label class="col-lg-2 col-md-2 text-right"​ style="line-height: 32px;"> 
                     <?= t('ស្វែងរកឈ្មោះឬ អត្ថលេខមន្ត្រី') ?>
 
                 </label>
@@ -27,7 +27,7 @@
                     <div class="typeahead__container ">
                         <div class="typeahead__field">
                             <div class="typeahead__query">
-                                <input class="form-control js-typeahead" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_id'] . ' ' . $csv_record['csv_name'] : '' ?>" name="officer_search" type="search"   autocomplete="off"​ style="font-family: khmermef1;"/>
+                                <input class="form-control js-typeahead" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_id'] . ' ' . $csv_record['csv_name'] : '' ?>" name="officer_search" type="search"   autocomplete="off"/>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                             <?= t('ឈ្មោះ') ?>
                         </label>
                         <div class="col-lg-8 col-md-8">
-                            <input class="form-control" name="officer_name" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_name'] : '' ?>" id="officer_name"type="text"​​  style="width: 100%!important; font-family: khmermef1;"/>
+                            <input class="form-control" name="officer_name" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_name'] : '' ?>" id="officer_name"type="text"/>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
@@ -271,9 +271,11 @@
             });
         });
     }
+
     $('body').delegate(".datepick", "focus", function (e) {
         dateTimeall();
     });
+    
     $("#frm-terminate").on('submit', function (e) {
         e.preventDefault();
         var date = $('#txtdate').val();

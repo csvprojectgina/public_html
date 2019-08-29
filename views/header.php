@@ -96,6 +96,7 @@ $dmid = $this->session->all_userdata()['dmid'];
 
             padding-left: 0px;
 
+            margin-left: 60px ;
 
 
         }
@@ -167,6 +168,7 @@ $dmid = $this->session->all_userdata()['dmid'];
                         <ul class="dropdown-menu">
 
                             <?php get_link('csv', 'csv_info', 'form', 'បញ្ចូលព័ត៌មានមន្ត្រីថ្មី'); ?>
+                            <?php get_link('csv', 'internship_info', 'index', 'បញ្ចូលព័ត៌មាននិស្សិតចុះកម្មសិក្សា'); ?>
 
                             <!-- <?php get_link('csv', 'csv_info', 'formretire', 'បញ្ចួលមន្ត្រីចូលនិវត្ដន៍'); ?>-->
 
@@ -192,22 +194,20 @@ $dmid = $this->session->all_userdata()['dmid'];
 
                             <?php get_link('csv', 'csv_update', 'csv_terminate', 'ការចូលនិវត្តដោយការបាត់បង់សម្បទាវិជ្ជាជីវៈ'); ?>
 
-                            <?php get_link('csv', 'csv_update', 'csv_maternity_leave', 'បោះបង់ ឬ លំហែមាតុភាព'); ?>
-
-
                             <?php get_link('csv', 'csv_update', 'list_promoted_csv', 'តម្លើងឋានន្តរសក្កិ/ថ្នាក់'); ?>
+
+            <!-- Rathana -->
+                            <?php get_link('csv', 'csv_update', 'csv_promoted_former_work', 'តម្លើងឋានន្តរសក្កិតាមវេនឬ តាមអតីតការងារ'); ?>
+                            <?php get_link('csv', 'csv_update', 'csv_permission_holiday', 'ច្បាប់អនុញ្ញាតច្បាប់ឈប់សម្រាក'); ?>
+            <!-- end Rathana -->
 
                             <?php get_link('csv', 'csv_update', 'csv_promoted_certificated', 'តម្លើងឋានន្តរសក្កិ/ថ្នាក់តាមវិញានបនប័ត្រ'); ?>
 
                             <?php get_link('csv', 'csv_update', 'csv_transfer_job', 'ផ្ទេរការងារមន្ត្រី'); ?>
-                            <?php get_link('csv', 'csv_update', 'csv_workframeworkout', 'មន្ត្រីទំនេរគ្មានបៀវត្ស'); ?>
-                            <?php get_link('csv', 'csv_update', 'csv_training', 'មន្ត្រីទទួលបានការបណ្តុះបណ្តាលក្នុង/និងក្រៅប្រទេស'); ?>
-                            <?php get_link('csv', 'csv_update', 'csv_training_royal_school', 'មន្ត្រីទទួលបានការបណ្តុះបណ្តាលនៅសាលាភូមិន្ទរដ្ឋបាល'); ?>
 
-                            <!-- <?php get_link('csv', 'csv_update', 'csv_maternity_leave', 'បោះបង់ ឬ លំហែមាតុភាព'); ?>-->
+                            <?php get_link('csv', 'csv_update', 'csv_maternity_leave', 'បោះបង់ ឬ លំហែមាតុភាព'); ?>
 
                             <?php get_link('csv', 'csv_update', 'csv_units_dignitaries', 'គ្រឿងឥស្សរិយយស'); ?>
-                            <?php get_link('csv', 'csv_update', 'csv_retires', 'មន្ត្រីចូលនិវត្ត'); ?>
 
                             <?php get_link('csv', 'csv_info', 'formdelete', 'លុបមន្ត្រី'); ?>
 
@@ -357,56 +357,41 @@ $dmid = $this->session->all_userdata()['dmid'];
 
                             <?php get_link('csv', 'framework_report', 'index', 'មន្រ្តីតាមក្របខ័ណ្ឌ'); ?> 
 
-                            <?php get_link('csv', 'csv_currentrole_report', 'index', 'ស្ថិតិមុខតំណែងមន្រ្តីរាជកា
-                            <br>របម្រើការងារក្នុងទីស្តីការក្រសួង'); ?>
+ <!--  this is Rathana block -->
+                            <li class="dropdown-submenu">
 
-                            <?php //get_link('csv', 'framework_detail_report', 'index', 'មន្រ្តីលម្អិតតាមក្របខ័ណ្ឌ'); ?>
+                            <a tabindex="-1" href="javascript:void(0)"> <?= t('របាយការណ៍ បច្ចុប្បន្នភាពមន្ត្រីរាជការ') ?></a>
+                                <ul class="dropdown-menu">
+
+                                <!-- <?php get_link('csv', 'csv_list_staff_update', '', 'ការចូលនិវត្តដោយការបាត់បង់សម្បទាវិជ្ជាជីវៈ'); ?>
+                                <?php get_link('csv', 'csv_list_staff_update', '', 'តម្លើងឋានន្តរសក្កិ/ថ្នាក់តាមវិញានបនប័ត្រ'); ?>
+                                <?php get_link('csv', 'csv_list_staff_update', '', 'តម្លើងឋានន្តរសក្កិ/ថ្នាក់'); ?> -->
+
+                                <?php get_link('csv', 'csv_list_staff_update', 'csv_transfer_out', 'ផ្ទេរការងារមន្ត្រីចេញ'); ?>
+                                <?php get_link('csv', 'csv_list_staff_update', 'csv_maternity_leave', 'លំហែមាតុភាព'); ?>
+                                
+                                <?php get_link('csv', 'csv_permission_holiday_report', 'index', 'មន្ត្រីទទួលបានច្បាប់ឈប់សម្រាក'); ?>
+                                <?php get_link('csv', 'csv_promoted_former_work', 'index', 'តម្លើងឋានន្តរសក្កិតាម វេន/អតីតការងារ'); ?>
+
+                                </ul>
+                            </li>
+
+                            <?php get_link('csv', 'csv_real_promote', 'index', 'មន្រ្តីតាំងស៊ប់តាមឆ្នាំ'); ?>
+                            <?php get_link('csv', 'csv_new_framework_year','index', 'មន្រ្តីរាជការ ក្របខណ្ឌថ្មីតាមឆ្នាំ'); ?>
+                            <?php get_link('csv', 'csv_degree_report','index', 'មន្រ្តីតាមប្រភេទសញ្ញាបត្រ និងកម្រិតសញ្ញាបត្រ'); ?>
+                            <?php get_link('csv', 'csv_deleted_report', 'index', 'មន្រ្តីបានលុបឈ្មោះ'); ?>
+                            <?php get_link('csv', 'internship_info', 'intern_report', 'ព័ត៌មាននិស្សិតចុះកម្មសិក្សា'); ?>
+<!-- End this is Rathana block -->  
+
+                            
+                            <?php get_link('csv', 'csv_currentrole_report', 'index', 'ស្ថិតិមុខតំណែងមន្រ្តីរាជការបម្រើការងារ</br>ក្នុងទីស្តីការក្រសួង'); ?>
+
+                            <!-- <?php //get_link('csv', 'framework_detail_report', 'index', 'មន្រ្តីលម្អិតតាមក្របខ័ណ្ឌ'); ?> -->
 
                            <?php get_link('csv', 'csv_report_detail', 'index', 'របាយការណ៍លម្អិត'); ?>
 
-                            <?php get_link('csv', 'csv_currentrole_report', 'cr_report_province', 'ស្ថិតិមុខតំណែងមន្រ្តីរាជការ
-                            <br>បម្រើការងារថ្នាក់មន្ទីរាជធានីខេត្ត'); ?>
+                            <?php get_link('csv', 'csv_currentrole_report', 'cr_report_province', 'ស្ថិតិមុខតំណែងមន្រ្តីរាជការបម្រើការងារ</br>ថ្នាក់មន្ទីរាជធានីខេត្ត'); ?>
 
-
-
-                            <!-- start edit -->
-
-                            <li class="dropdown-submenu">
-
-
-                                <a tabindex="-1" href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"> <?= t('របាយការណ៍បច្ចុប្បន្នភាពមន្ត្រីរាជការ') ?></a>
-
-                                <ul class=" dropdown-menu">
-
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_terminate', 'ការចូលនិវត្តដោយការបាត់បង់សម្បទាវិជ្ជាជីវៈ'); ?>
-                                    
-                                    <?php get_link('csv', 'csv_list_staff_update', '', 'តម្លើងឋានន្តរសក្កិ/ថ្នាក់'); ?>
-
-                                   
-
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_maternity_leave', 'បោះបង់ ឬ លំហែមាតុភាព'); ?>
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_promoted_certificated', 'តម្លើងឋានន្តរសក្កិ/ថ្នាក់តាមវិញានបនប័ត្រ'); ?>
-
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_workframeworkout', 'មន្ត្រីទំនេរគ្មានបៀវត្ស'); ?>
-
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_transfer_job', 'ផ្ទេរការងារមន្ត្រី'); ?>
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_training', 'បណ្តុះបណ្តាលក្រៅប្រទេស'); ?>
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_training_in', 'បណ្តុះបណ្តាលក្នុងប្រទេស'); ?>
-
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_training_royal_school', 'បណ្តុះបណ្តាលនៅសាលាភូមិន្ទរដ្ឋបាល'); ?>
-
-
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_units_diginitaries', 'គ្រឿងឥស្សរិយយស'); ?>
-
-                                    <?php get_link('csv', 'csv_list_staff_update', 'csv_retires', 'មន្ត្រីចូលនិវត្ត'); ?>
-
-
-
-
-                                </ul>
-
-                            </li>
-                            <!-- end edit -->
 
                         </ul>
 

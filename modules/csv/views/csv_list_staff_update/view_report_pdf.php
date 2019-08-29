@@ -3,7 +3,7 @@
 
 include_once(APPPATH . "libraries/mpdf60/mpdf.php");
 $mpdf = new mPDF();
-$title = 'ស្ថិតិមន្រ្តីរាជការបោះបង់ ឬ លំហែមាតុភាព';
+$title = 'ស្ថិតិមន្រ្តីរាជការ លំហែមាតុភាព';
 $mpdf->simpleTables = true;
 $mpdf->useSubstitutions = false;
 $mpdf->incrementFPR1 = 1;
@@ -65,15 +65,15 @@ $html .= '<p style="font-family: khmermef2;text-align: center;font-size: 18px">'
 $body = '<table border="0" cellpadding="3" cellspacing="0" style="border-collapse: collapse;font-family: khmermef1; width: 100%; text-align: center;">
            <thead>
             <tr style="background-color: lightgrey;">
-                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:11px">ល.រ</th>
-                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:11px">ឈ្មោះ</th>
-                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:11px ">ភេទ</th>
-                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:11px">មុខតំណែង</th>
-                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:11px ">អង្គភាព</th>
-                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:11px ">កាលបរិច្ឆេទចាប់ផ្តើម</th>
-                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:11px ">កាលបរិច្ឆេទបញ្ចប់</th>
+                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:14px">ល.រ</th>
+                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:14px">ឈ្មោះ</th>
+                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:14px ">ភេទ</th>
+                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:14px">មុខតំណែង</th>
+                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:14px ">អង្គភាព</th>
+                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:14px ">កាលបរិច្ឆេទចាប់ផ្តើម</th>
+                <th style="border: 1px solid blue; font-family: KhmerOS; font-size:14px ">កាលបរិច្ឆេទបញ្ចប់</th>
                 
-                <th style="border: 1px solid blue; font-family: KhmerOS; width: 90px;">Issue Date</th>               
+                <th style="border: 1px solid blue; font-family: KhmerOS; width: 14px;">Issue Date</th>               
             </tr>
         </thead>
             <tbody>';
@@ -93,14 +93,14 @@ foreach ($month as $k => $value) {
 
         foreach ($getleader->result() as $row) {
             $body .= '<tr>
-                        <td style="height: 30px;">' . ++$i . '</td>
-                        <td style="height: 30px;">' . $row->lastname . ' ' . $row->firstname . '</td>
-                        <td style="height: 30px;">' . $row->gender . '</td>
-                        <td style="height: 30px;">' . $row->current_role_in_khmer . '</td>
-                        <td style="height: 30px;">' . $row->unit_name . '</td>
-                        <td style="height: 30px;">' . date('d-M-Y', strtotime($row->on_date)) . '</td>
-                        <td style="height: 30px;">' . date('d-M-Y', strtotime($row->end_date)) . '</td>
-                        <td style="height: 30px;">' . date('d-M-Y', strtotime($row->issue_date)) . '</td>
+                        <td style="height: 20px;">' . ++$i . '</td>
+                        <td style="height: 20px;">' . $row->lastname . ' ' . $row->firstname . '</td>
+                        <td style="height: 20px;">' . $row->gender . '</td>
+                        <td style="height: 20px;">' . $row->current_role_in_khmer . '</td>
+                        <td style="height: 20px;">' . $row->unit_name . '</td>
+                        <td style="height: 20px;">' . date('d-M-Y', strtotime($row->on_date)) . '</td>
+                        <td style="height: 20px;">' . date('d-M-Y', strtotime($row->end_date)) . '</td>
+                        <td style="height: 20px;">' . date('d-M-Y', strtotime($row->issue_date)) . '</td>
                         </tr>';
 
         }

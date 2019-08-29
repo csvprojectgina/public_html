@@ -41,12 +41,10 @@
     }
 
 
-
-    
-
-    input{ font-family: khmermef1;
-
+    input{
+        font-family: khmermef1;
     }
+
 
 
 
@@ -66,29 +64,26 @@
 
 
 
-        <div class="panel-heading thumbnail btn-group"​>
+        <div class="panel-heading thumbnail btn-group">
 
             <h3 class="panel-title"><!--<img src="<?= base_url('assets/bs/css/images/search.gif') ?>" />​ --><?= t('ព័ត៌មានមន្ត្រី') ?></h3>
 
         </div>
 
-        <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+        <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px; ">
 
             <table  id="table" style="width: 100%!important; font-family: khmermef1;" cellpadding="0" cellspacing="0" border="1" class="table table-hover table-striped table-bordered dt-responsive nowrap">
 
-                <thead>
+                <thead >
 
 
 
                     <?php
 
-
-
                     $dmid = $this->session->all_userdata()['dmid'];
 
-
-
                     ?>
+
 
 
 
@@ -200,7 +195,7 @@
 
 
 
-        $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+        $(this).html('<input type="text" placeholder="Search ' + title + '"  style="font-family: khmermef1;" />');
 
 
 

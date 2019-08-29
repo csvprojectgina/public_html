@@ -41,7 +41,8 @@ class Boot {
 
         $_class_functions = get_class_methods(ucfirst($controller));
 
-        // if (count($_class_functions) > 0) {
+        // // if ((count($_class_functions)) > 0) {
+        //     if ((!empty($_class_functions)) &&(count($_class_functions))) {
         //     foreach ($_class_functions as $action) {
         //         if ($action != '__construct' && $action != 'get_instance' && $action != '__get') {
         //             $page = "{$module}/{$controller}/{$action}";
@@ -61,6 +62,7 @@ class Boot {
         //         }
         //     }
         // }
+       
         $this->load_boot();
     }
 

@@ -1,10 +1,8 @@
 <style>
-       input{ font-family: khmermef1;}
+    input{
+        font-family: khmermef1;
+    }
 </style>
-
-
-
-
 <form class="form-horizontal" role="form" action="<?= site_url('csv/csv_search_advance/print_adv') ?>"  method="post">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -12,7 +10,7 @@
         </div>
 
         <div class="panel-body">
-            <table  style="font-family: khmermef1;line-height: 3; font-size: 15.5px; border:2px solid #CCC; margin: auto; margin-bottom: 10px " cellpadding="0" cellspacing="0" >
+            <table  style=" font-family: khmermef1; line-height: 3; font-size: 15.5px; border:2px solid #CCC; margin: auto; margin-bottom: 10px " cellpadding="0" cellspacing="0" >
                 <tr  style="  background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%); background-repeat: repeat-x; font-size: 16px;font-family: khmer mef2; border:1px solid #CCC; text-align: center;​">
                     <td style="border:1px solid #CCC;" colspan="2">ព័ត៌មានទូទៅ</td>
                     <td style="border:1px solid #CCC;" colspan="2">ការងារ</td>
@@ -159,7 +157,7 @@
             </div>
 
             <!-- table data -->
-            <table cellpadding="0" cellspacing="0" border="1" class="table table-striped table-bordered table-hover" style="font-family: khmermef1;text-align: center; vertical-align: middle;" id="my_gr">
+            <table cellpadding="0" cellspacing="0" border="1" class="table table-striped table-bordered table-hover" style=" font-family: khmermef1; text-align: center; vertical-align: middle;" id="my_gr">
                 <thead>
                     <tr style="background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);background-repeat: repeat-x;">
                         <th style="text-align: center;"><?= t('ល.រ') ?></th>
