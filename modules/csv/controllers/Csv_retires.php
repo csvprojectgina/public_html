@@ -5,32 +5,31 @@ if (!defined('BASEPATH'))
 
 class Csv_retires extends Admin_Controller {
 
-    // index ===============
-    public function index() {
-        $this->load->view('header');
-        $this->load->view('csv/retires/index');
-        $this->load->view('footer');
-    }
     // index not unit
     function not_retires()
       {
-            $this->load->view('header');
+            $this->load->view('header'); $this->load->view('csv/retires/advanced_search');
+
+            $this->load->view('csv/retires/advanced_search');
             $this->load->view('csv/retires/notunit');
             $this->load->view('footer');
       }
       // index not unit
-      function deletename()
-        {
-              $this->load->view('header');
-              $this->load->view('csv/retires/transferjob');
-              $this->load->view('footer');
-        }
+
+      public function form2() {
+        $this->load->view('header');
+        $this->load->view('csv/retires/form');
+        $this->load->view('footer');
+    }
+    
     // advanced search ========
     public function advanced_search() {
         $this->load->view('header');
         $this->load->view('csv/retires/advanced_search');
         $this->load->view('footer');
     }
+
+
 
     // form ===============
     public function form() {
@@ -46,6 +45,7 @@ class Csv_retires extends Admin_Controller {
                         FROM
                                 display AS dis
                         ORDER BY
+                                dis.disp_num
                                 dis.disp_num - 0 ASC ");
         $res = $qr->result();
         header('Content-Type: application/json; charset=utf-8');

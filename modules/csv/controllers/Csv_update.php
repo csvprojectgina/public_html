@@ -128,6 +128,7 @@ class csv_update extends Admin_Controller
         $this->load->view('csv_update/training');
 
 
+<<<<<<< HEAD
 
         $this->load->view('footer');
 
@@ -139,6 +140,12 @@ class csv_update extends Admin_Controller
 
 
 
+=======
+   
+
+    
+    public function list_promoted_csv()
+>>>>>>> master
     {
 
 
@@ -2084,6 +2091,7 @@ WHERE
 
     }
 
+<<<<<<< HEAD
 
 
 
@@ -2361,6 +2369,8 @@ WHERE
 
 
         echo json_encode($res);
+=======
+>>>>>>> master
 
 
 
@@ -2372,7 +2382,13 @@ WHERE
 
 
 
+<<<<<<< HEAD
     {
+=======
+                                 common_official_code ASC";
+        $object->setActiveSheetIndex(0);
+        
+>>>>>>> master
 
 
 
@@ -2380,7 +2396,11 @@ WHERE
 
 
 
+<<<<<<< HEAD
                                         l.type,
+=======
+        $list_csv = $this->db->query($sql_str);
+>>>>>>> master
 
 
 
