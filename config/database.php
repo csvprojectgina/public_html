@@ -48,6 +48,10 @@
 $active_group = 'default';
 $active_builder = TRUE;
 
+// $db['default']['hostname'] = 'mlmupc.org';
+// $db['default']['username'] = 'mlmupc_mlmupc';
+// $db['default']['password'] = '4pLCF?9v#oz4';
+// $db['default']['database'] = 'mlmupc_csv';
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';

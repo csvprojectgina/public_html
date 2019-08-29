@@ -7,7 +7,7 @@
     </head> 
     <body>
         <div class="container">
-            <table id="table" class="table table-striped table-bordered" style="font-family: khmermef1;" cellspacing="0" width="100%">
+            <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th>ឈ្មោះ</th>

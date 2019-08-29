@@ -7,9 +7,6 @@
     .remove-file i{
         color: red;
     }
-    input{
-        font-family: khmermef1;
-    }
 </style>
 <div class="panel panel-default">
     <div class="panel-heading">
@@ -28,7 +25,7 @@
                     <div class="typeahead__container ">
                         <div class="typeahead__field">
                             <div class="typeahead__query">
-                                <input class="form-control js-typeahead" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_id'] . ' ' . $csv_record['csv_name'] : '' ?>" name="officer_search" type="search" style="font-family: khmermef1;"   autocomplete="off"/>
+                                <input class="form-control js-typeahead" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_id'] . ' ' . $csv_record['csv_name'] : '' ?>" name="officer_search" type="search"   autocomplete="off"​ style="font-family: khmermef1;"/>
                             </div>
                         </div>
                     </div>
@@ -39,7 +36,7 @@
         <?php if (isset($csv_record['csv_id'])) { ?>
             <fieldset>
                 <legend><?= t('ព័ត៌មានលំអិតមន្ត្រី') ?></legend>
-                <div class="form-group">
+                <div class="form-group"​ >
 
                     <div class="col-lg-4 col-md-4">
                         <label class="col-lg-4 col-md-4 text-right " style="line-height: 32px;">
@@ -54,7 +51,7 @@
                             <?= t('ឈ្មោះ') ?>
                         </label>
                         <div class="col-lg-8 col-md-8">
-                            <input class="form-control" name="officer_name" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_name'] : '' ?>" id="officer_name"type="text"/>
+                            <input class="form-control" name="officer_name" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_name'] : '' ?>" id="officer_name"type="text"​ style="font-family: khmermef1;"/>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
@@ -227,7 +224,6 @@
                                                 <option value="die">មរណភាព</option>
                                                 <option value="dismissal">បោះបង់ចោលការងារ</option>
                                                 <option value="go_out_of_work">សុំលាឈប់ពីការងារ</option>
-                                                <option value="internship_not_success">កម្មសិក្សាមិនជោគជ័យ</option>
                                                 <option value="not_all_retirement_conditions">មិនគ្រប់លក្ខខ័ណ្ឌចូលនិវត្ត</option>
                                             </select>
                                         </div>
@@ -308,35 +304,31 @@
         {
             // alert(die);
            myFunction(die);
-        } 
-        else if (b === 'dismissal')
+        } else if (b === 'dismissal')
         {
             myFunction(dismissal);
-        } 
-        else if (b === 'go_out_of_work')
+        } else if (b === 'go_out_of_work')
         {
             myFunction(go_out_of_work);
-        } 
-        else if (b === 'internship_not_success') {
-
-           myFunction(internship_not_success);
-        }
-        else if (b === 'not_all_retirement_conditions') {
+        } else if (b === 'not_all_retirement_conditions') {
            myFunction(not_all_retirement_conditions);
         }
 
     });
     function myFunction(val_str) {
-        document.getElementById("remark1").value = val_str;
-    }
-        
+    document.getElementById("remark1").value = val_str;
+}
+    
     $('#btn-submit-deletion').on('click', function () {
         deletion();
     });
 
     function deletion() {
+        var die = $("#selected").val();
+        // var dismissal = $("#selected option:selected").val();
+        // var go_out_of_work = $("#selected option:selected").val();
+        // var not_all_retirement_conditions = $("#selected option:selected").val();
 
-         var die = $("#selected").val();
         var csv_id = $('#csv_id').val();
         var csv_work_id = $('#csv_work_id').val();
         var txtDate = $('#txtDate').val();
@@ -346,13 +338,9 @@
         var tags = multiTags.find("input.tag1").map(function () {
             return $(this).val();
         }).get();
-
-
-        /*
         // alert(tags);
         // return false;
         // var date = $('#txtdate').val();
-        */
         if (txtDate === '' || die ==='') {
             $('#selected').parent().addClass('has-error');
             
@@ -383,13 +371,7 @@
                                 cbo: die,
                                 txtnu_of_reference: txtnu_of_reference
                             },
-                            beforeSend: function () {
-                                $('.xmodal').show();
-                            },
-                            success: function (data) {
-                                $('.xmodal').hide();
-                            }
-                            // cache: false
+                            cache: false
                         }).done(function (data) {
                             if (data.status) {
                                 swal({
@@ -410,6 +392,27 @@
                 allowOutsideClick: false
             });
 
+
+         /*   $.ajax({
+                type: 'post',
+                url: '<?= site_url('csv/csv_update/save_del_meternity') ?>',
+                datatype: 'json',
+                data: {
+                    csv_id: csv_id,
+                    csv_work_id: csv_work_id,
+                    txtDate: txtDate,
+                    remark: remark,
+                    tags: tags,
+                    cbo: die,
+                    txtnu_of_reference: txtnu_of_reference
+                },
+                beforeSend: function () {
+                    $('.xmodal').show();
+                },
+                success: function (data) {
+                    $('.xmodal').hide();
+                }
+            });*/
         }
 
     }
@@ -422,7 +425,7 @@
     function save_maternity_leave() {
         var firstDate = $('#firstDate').val();
         var secondDate = $('#secondDate').val();
-        var reMark = $('#reMark').val();
+        var remark = $('#remark').val();
         var csv_id = $('#csv_id').val();
         var csv_work_id = $('#csv_work_id').val();
         var txtnu_of_reference = $('#txtnu_of_reference_1').val();
@@ -532,6 +535,7 @@
         $('#fild-count').val(parseInt(i) + 1);
     });
 
+
     //fancybox for ការលុបឈ្មោះចេញពីមន្ត្រី
     $('#add-field-out').on('click', function () {
         var i = $('#fild-count-out').val();
@@ -583,19 +587,6 @@
                 autoclose: true,
                 todayHighlight: true,
                 toggleActive: true
-            // }).on('change', function () {
-            //     var getdate = $(this).val();
-            //     var res = getdate.split("-");
-
-            //     var d = res[0];
-            //     var m = parseInt(res[1]);
-            //     var y = res[2];
-
-            //     var newdate = new Date(y, m, d);
-            //     var addmonth = new Date(newdate.setMonth(newdate.getMonth() + 2));
-
-            //     $('#secondDate').val(formatDate(addmonth));
-
             });
         });
     }
@@ -617,18 +608,18 @@
                 autoclose: true,
                 todayHighlight: true,
                 toggleActive: true
-            // }).on('change', function () {
-            //     var getdate = $(this).val();
-            //     var res = getdate.split("-");
+            }).on('change', function () {
+                var getdate = $(this).val();
+                var res = getdate.split("-");
 
-            //     var d = res[0];
-            //     var m = parseInt(res[1]);
-            //     var y = res[2];
+                var d = res[0];
+                var m = parseInt(res[1]);
+                var y = res[2];
 
-            //     var newdate = new Date(y, m, d);
-            //     var addmonth = new Date(newdate.setMonth(newdate.getMonth() + 2));
+                var newdate = new Date(y, m, d);
+                var addmonth = new Date(newdate.setMonth(newdate.getMonth() + 2));
 
-            //     $('#secondDate').val(formatDate(addmonth));
+                $('#secondDate').val(formatDate(addmonth));
 
             });
         });

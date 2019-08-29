@@ -29,9 +29,7 @@
 <div class="panel panel-default">
     <div class="panel-heading thumbnail btn-group">
         <h3 class="panel-title">
-            <!--<img src="<?= base_url('assets/bs/css/images/search.gif') ?>" />? -->
-            <?= t('ស្ថិតិមន្រ្តីរាជការ លំហែមាតុភាព') ?>
-        </h3>
+            <!--<img src="<?= base_url('assets/bs/css/images/search.gif') ?>" />? --><?= t('ស្ថិតិមន្រ្តីរាជការបោះបង់ ឬ លំហែមាតុភាព') ?></h3>
     </div>
     <div class="panel-body">
         <div style="margin: -10px 0 40px 0;vertical-align: middle;">
@@ -137,8 +135,6 @@
             }
         });
     });
-
-    
     $(document).on('click', '#btn_print', function (e) {
 
         var by_year = $('#by_year').val();

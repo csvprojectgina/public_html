@@ -22,7 +22,7 @@
 
 </style>
 
-<form action="" class="form-horizontal" method="post" role="form" style=" font-family: khmermef1; ">
+<form action="" class="form-horizontal" method="post" role="form">
 
     <div class="panel panel-default">
 
@@ -66,7 +66,7 @@
 
                 </span>
 
-                <span style="float: right;  font-family: khmermef1;">
+                <span style="float: right;">
 
                     <label for="search">
 
@@ -74,7 +74,7 @@
 
                     </label>
 
-                    <input id="search" style="height: 30px;border-radius: 4px;line-height: 4px;  font-family: khmermef1; " type="text"/>
+                    <input id="search" style="height: 30px;border-radius: 4px;line-height: 4px;" type="text"/>
 
                     <!--<select name="type_building" id="type_building" class="type_building" validate_act style="width: 200px;height: 30px;"></select>-->
 
@@ -84,7 +84,7 @@
 
             </div>
 
-            <table border="1" cellpadding="0" cellspacing="0" class="table table-hover table-striped table-bordered dt-responsive nowrap" id="my_gr" style=" font-family: khmermef1; " >
+            <table border="1" cellpadding="0" cellspacing="0" class="table table-hover table-striped table-bordered dt-responsive nowrap" id="my_gr">
 
                 <thead>
 
@@ -106,7 +106,7 @@
 
                         </th>
 
-                        <th style="text-align: center;">
+                        <th style="text-align: center;​">
 
                             <?= t('ឈ្មោះ') ?>
 

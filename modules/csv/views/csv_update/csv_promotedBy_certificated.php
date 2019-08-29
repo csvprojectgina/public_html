@@ -25,7 +25,7 @@
                     <div class="typeahead__container ">
                         <div class="typeahead__field">
                             <div class="typeahead__query">
-                                <input class="form-control js-typeahead" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_id'] . ' ' . $csv_record['csv_name'] : '' ?>" name="officer_search" type="search"   autocomplete="off"/>
+                                <input class="form-control js-typeahead" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_id'] . ' ' . $csv_record['csv_name'] : '' ?>" name="officer_search" type="search"   autocomplete="off" style="width: 100%!important; font-family: khmermef1;"/>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                         <?= t('ឈ្មោះ') ?>
                     </label>
                     <div class="col-lg-8 col-md-8">
-                        <input class="form-control" name="officer_name" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_name'] : '' ?>" id="officer_name"type="text"/>
+                        <input class="form-control" name="officer_name" value="<?php echo isset($csv_record['csv_id']) ? $csv_record['csv_name'] : '' ?>" id="officer_name"type="text" style="width: 100%!important; font-family: khmermef1;"/>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">

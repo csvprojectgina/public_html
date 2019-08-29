@@ -48,11 +48,11 @@
 
                 </span>
 
-                <span style="float: right;​ font-family: khmermef1;">
+                <span style="float: right;">
 
                     <label for="search"><?= t('ស្វែងរក') ?></label>
 
-                    <input type="text" id="search" style="height: 30px;border-radius: 4px;line-height: 4px; font-family: khmermef1; " />
+                    <input type="text" id="search" style="height: 30px;border-radius: 4px;line-height: 4px; font-family: khmermef1;" />
 
 
 
@@ -66,7 +66,7 @@
 
 
 
-            <table cellpadding="0" cellspacing="0" border="1" class="table table-striped table-bordered table-hover" id="my_gr" style=" font-family: khmermef1; " >
+            <table cellpadding="0" cellspacing="0" border="1" class="table table-striped table-bordered table-hover" id="my_gr"​ style="font-family: khmermef1;" >
 
                 <thead>
 

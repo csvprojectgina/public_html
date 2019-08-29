@@ -73,7 +73,7 @@
                     <label for="search"><?= t('ស្វែងរកព័ត៌មានមន្ត្រី') ?></label>
 
 
-                    <input type="text" id="search" style="height: 30px;border-radius: 4px;line-height: 4px; font-family: khmermef1;" />
+                    <input type="text" id="search" style="height: 30px;border-radius: 4px;line-height: 4px;"​​  />
 
 
 
@@ -94,7 +94,7 @@
 
 
 
-            <table cellpadding="0" cellspacing="0" border="1" style="font-family: khmermef1;" class="table table-hover table-striped table-bordered dt-responsive nowrap" id="my_gr">
+            <table cellpadding="0" cellspacing="0" border="1" class="table table-hover table-striped table-bordered dt-responsive nowrap" id="my_gr">
 
 
                 <thead>
