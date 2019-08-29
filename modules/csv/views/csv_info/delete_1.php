@@ -42,7 +42,7 @@
 
     }
 
-    input{ font-family: khmermef1;}
+
 
 
 
@@ -61,7 +61,7 @@
         <div class="panel-heading thumbnail btn-group">
 
 
-            <h3 class="panel-title"><img src="<?= base_url('assets/bs/css/images/search.gif') ?>" />​<?= t('ព័ត៌មានមន្ត្រី') ?></h3>
+            <h3 class="panel-title"><!--<img src="<?= base_url('assets/bs/css/images/search.gif') ?>" />​ --><?= t('ព័ត៌មានមន្ត្រី') ?></h3>
 
 
         </div>
@@ -70,7 +70,7 @@
         <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
 
 
-            <table  id="table" style="width: 100%!important;font-family: khmermef1; " cellpadding="0" cellspacing="0" border="1" class="table table-hover table-striped table-bordered dt-responsive nowrap">
+            <table  id="table" style="width: 100%!important; font-family: khmermef1;" cellpadding="0" cellspacing="0" border="1" class="table table-hover table-striped table-bordered dt-responsive nowrap">
 
 
                 <thead>
@@ -163,7 +163,7 @@
         var title = $(this).text();
 
 
-        $(this).html('<input type="text"  placeholder="Search ' + title + '" />');
+        $(this).html('<input type="text" placeholder="Search ' + title + '" />');
 
 
     });
@@ -214,7 +214,7 @@
                 "sLengthMenu": "\_MENU_ កំណត់ត្រាក្នុងមួយទំព័រ", //menu
 
 
-                "sSearch": "_INPUT_​​​", //search
+                "sSearch": "_INPUT_ ", //search
 
 
                 "sInfo": "​ _START_ នៃ _END_​ នៃធាតុ _MAX_ ",

@@ -9,7 +9,7 @@
         </div>
 
         <div class="panel-body">
-            <table cellpadding="0" cellspacing="0" border="1" class="table table-striped table-bordered table-hover" id="my_gr">
+            <table cellpadding="0" cellspacing="0" border="1" style="font-family: khmermef1;" class="table table-striped table-bordered table-hover" id="my_gr">
                 <thead>
                     <tr style="background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);background-repeat: repeat-x;">
                         <th style="text-align: left;width: 20%;" rowspan="2"><?= t('ទីតាំងអង្គភាព') ?></th>
