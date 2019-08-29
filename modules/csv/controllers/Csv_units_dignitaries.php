@@ -175,15 +175,22 @@ class csv_units_dignitaries extends Admin_Controller
 
 
 
+    function not_retires()
+    {
+          $this->load->view('header'); $this->load->view('csv/retires/advanced_search');
+
+          $this->load->view('csv/retires/advanced_search');
+          $this->load->view('csv/retires/notunit');
+          $this->load->view('footer');
+    }
 
 
 
-
-    public function delete(){
-
+    public function delete_name(){
 
 
-        $id = $this->input->post('id');
+
+        $id = $this->input->post('id_name');
 
 
 
@@ -191,7 +198,7 @@ class csv_units_dignitaries extends Admin_Controller
 
 
 
-            $query = query("DELETE FROM `tbl_medal` WHERE `tbl_medal`.`id` = $id");
+            $query = query("DELETE FROM `tbl_medal_csv` WHERE `tbl_medal`.`id` = $id");
 
 
 

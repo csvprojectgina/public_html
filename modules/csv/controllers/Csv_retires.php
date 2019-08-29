@@ -37,7 +37,14 @@ class Csv_retires extends Admin_Controller {
         $this->load->view('csv/retires/form');
         $this->load->view('footer');
     }
+    function not_retires()
+    {
+          $this->load->view('header'); $this->load->view('csv/retires/advanced_search');
 
+          $this->load->view('csv/retires/advanced_search');
+          $this->load->view('csv/retires/notunit');
+          $this->load->view('footer');
+    }
      // get_num_dip ==========
     public function get_num_dip() {
         $qr = query("SELECT DISTINCTROW
