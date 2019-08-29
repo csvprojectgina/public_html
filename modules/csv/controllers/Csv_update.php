@@ -72,23 +72,9 @@ class csv_update extends Admin_Controller
 
     }
 
-    public function csv_maternity_leave()
-    {
+   
 
-        $this->load->view('header');
-        $this->load->view('csv_update/csv_maternity_leave');
-        $this->load->view('footer');
-
-    }
-
-
-    public function csv_units_dignitaries()
-    {
-        $this->load->view('header');
-        $this->load->view('csv_update/csv_units_dignitaries');
-        $this->load->view('footer');
-    }
-
+    
     public function list_promoted_csv()
     {
         $this->load->view('header');
@@ -378,94 +364,6 @@ class csv_update extends Admin_Controller
 
     }
 
-    public function get_promoted_csv()
-    {
-        // var ===============
-
-        $offset = $this->input->post('offset');
-        $limit = $this->input->post('limit');
-        $search = trim($this->input->post('search'));
-        $year = $this->input->post('year');
-
-        // $search = trim(preg_replace("/\\s+/iu", "", str_replace('​', '', $this->input->post('search'))));
-        // by role =============
-        //        $pr_code = $this->session->userdata('pr_code');
-        //        $sWhere = "";
-        //        if ($pr_code == "") {
-        //            $sWhere .= "1=1 ";
-        //        } else {
-        //            $sWhere .= "1=1 AND (rd.pro_id IN({$pr_code})) ";
-
-        //        }
-
-
-        $where = " ";
-
-        if ($search != '') {
-
-            $where .= "AND (civil_servant_id LIKE '%{$search}%' ";
-
-            $where .= "OR firstname LIKE '%{$search}%' ";
-
-            $where .= "OR lastname LIKE '%{$search}%' ";
-
-            // $where .= "OR gender LIKE '%{$search}%' ";
-
-            $where .= "OR english_full_name LIKE '%{$search}%' ) ";
-
-            // $where .= "OR mobile_phone LIKE '%{$search}%' ";
-
-            if ($year != 0) {
-
-                $where .= " AND datepromoted LIKE  '{$year}%' ";
-
-            } else {
-
-                $where .= "  ";
-
-            }
-
-        } elseif ($year != 0) {
-
-            $where .= " AND datepromoted LIKE  '{$year}%' ";
-
-        } elseif ($year == 0) {
-
-            $where = " ";
-        }
-
-        // cnt. ==============
-
-        $q = query("SELECT COUNT(*) as c FROM v_getpromote_date 
-
-                                WHERE    1=1  {$where} ");
-
-        $total_record = $q->row()->c - 0;
-
-        $total_page = ceil($total_record / $limit);
-        // qr. ==============
-
-        $qr = query("SELECT vg.*,(SELECT TYPE FROM list_salary e1 WHERE e1.id < e.id ORDER BY id DESC LIMIT 1 OFFSET 0) AS prev_value FROM v_getpromote_date vg JOIN list_salary e ON vg.`levelsalary` = e.`type` WHERE  1 = 1 {$where}
-
-                                ORDER BY
-                                        CASE
-                                WHEN common_official_code IN ('', '0') THEN
-
-                                        1    ELSE    0    END,
-
-                                 common_official_code ASC
-
-                                LIMIT {$offset}, {$limit}  ");
-
-        $res = $qr->result();
-
-        header('Content-Type: application/json; charset=utf-8');
-
-        $arr = array('total_page' => $total_page, 'res' => $res, 'total_record' => $total_record);
-
-        echo json_encode($arr);
-
-    }
 
 
 

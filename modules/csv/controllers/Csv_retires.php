@@ -5,12 +5,6 @@ if (!defined('BASEPATH'))
 
 class Csv_retires extends Admin_Controller {
 
-    // index ===============
-    public function index() {
-        $this->load->view('header');
-        $this->load->view('csv/retires/index');
-        $this->load->view('footer');
-    }
     // index not unit
     function not_retires()
       {
@@ -19,12 +13,7 @@ class Csv_retires extends Admin_Controller {
             $this->load->view('footer');
       }
       // index not unit
-      function deletename()
-        {
-              $this->load->view('header');
-              $this->load->view('csv/retires/transferjob');
-              $this->load->view('footer');
-        }
+    
     // advanced search ========
     public function advanced_search() {
         $this->load->view('header');
