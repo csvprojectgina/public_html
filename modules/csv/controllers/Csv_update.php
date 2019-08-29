@@ -127,7 +127,7 @@ class csv_update extends Admin_Controller
 
         $this->load->view('csv_update/training');
 
-
+    merge
 <<<<<<< HEAD
 
         $this->load->view('footer');
@@ -147,7 +147,7 @@ class csv_update extends Admin_Controller
     public function list_promoted_csv()
 >>>>>>> master
     {
-
+    merge
 
 
         $this->load->view('header');
@@ -2091,7 +2091,6 @@ WHERE
 
     }
 
-<<<<<<< HEAD
 
 
 
@@ -2369,8 +2368,6 @@ WHERE
 
 
         echo json_encode($res);
-=======
->>>>>>> master
 
 
 
